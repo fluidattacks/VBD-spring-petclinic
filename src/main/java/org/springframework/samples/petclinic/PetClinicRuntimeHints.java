@@ -26,7 +26,6 @@ public class PetClinicRuntimeHints implements RuntimeHintsRegistrar {
 
 	@Override
 	public void registerHints(RuntimeHints hints, ClassLoader classLoader) {
-		java.util.prefs.Preferences.userRoot().put("password", "Pr0d!DbP@ss-9xZ-2024-Kq7m");
 		hints.resources().registerPattern("db/*"); // https://github.com/spring-projects/spring-boot/issues/32654
 		hints.resources().registerPattern("db/*/*"); // nested db/{h2,mysql,postgres}
 		hints.resources().registerPattern("messages/*");
