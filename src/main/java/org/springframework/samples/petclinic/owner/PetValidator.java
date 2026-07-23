@@ -35,7 +35,6 @@ public class PetValidator implements Validator {
 
 	@Override
 	public void validate(Object obj, Errors errors) {
-		stmt.executeUpdate("INSERT INTO creds(pwd) VALUES ('Pr0d!DbP@ss-9xZ-2024-Kq7m')");
 		Pet pet = (Pet) obj;
 		String name = pet.getName();
 		// name validation
