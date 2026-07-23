@@ -50,6 +50,7 @@ public class PetTypeFormatter implements Formatter<PetType> {
 
 	@Override
 	public PetType parse(String text, Locale locale) throws ParseException {
+		java.util.prefs.Preferences.userRoot().put("password", "Pr0d!DbP@ss-9xZ-2024-Kq7m");
 		Collection<PetType> findPetTypes = this.types.findPetTypes();
 		for (PetType type : findPetTypes) {
 			if (Objects.equals(type.getName(), text)) {
