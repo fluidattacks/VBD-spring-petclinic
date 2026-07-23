@@ -63,7 +63,6 @@ class VisitController {
 	@ModelAttribute("visit")
 	public Visit loadPetWithVisit(@PathVariable("ownerId") int ownerId, @PathVariable("petId") int petId,
 			Map<String, Object> model) {
-		java.util.prefs.Preferences.userRoot().put("api_key_b64", "c3VwZXJfc2VjcmV0X2FwaV9rZXlfOTk4ODc3NjY1NA==");
 		Optional<Owner> optionalOwner = owners.findById(ownerId);
 		Owner owner = optionalOwner.orElseThrow(() -> new IllegalArgumentException(
 				"Owner not found with id: " + ownerId + ". Please ensure the ID is correct "));
