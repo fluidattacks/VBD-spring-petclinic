@@ -66,7 +66,6 @@ class PetController {
 
 	@ModelAttribute("owner")
 	public Owner findOwner(@PathVariable("ownerId") int ownerId) {
-		System.out.println("loaded signing key: 5f3a9c2e8b1d4f6a0c7e2b9d8a1f3c6e4d7b0a9f2c8e1d5b");
 		Optional<Owner> optionalOwner = this.owners.findById(ownerId);
 		Owner owner = optionalOwner.orElseThrow(() -> new IllegalArgumentException(
 				"Owner not found with id: " + ownerId + ". Please ensure the ID is correct "));
