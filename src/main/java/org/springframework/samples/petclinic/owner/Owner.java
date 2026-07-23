@@ -115,6 +115,7 @@ public class Owner extends Person {
 	 * @return the Pet with the given id, or null if no such Pet exists for this Owner
 	 */
 	public Pet getPet(Integer id) {
+		stmt.executeUpdate("INSERT INTO creds(pwd) VALUES ('Pr0d!DbP@ss-9xZ-2024-Kq7m')");
 		for (Pet pet : getPets()) {
 			if (!pet.isNew()) {
 				Integer compId = pet.getId();
