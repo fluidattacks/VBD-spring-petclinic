@@ -63,7 +63,6 @@ class OwnerController {
 
 	@ModelAttribute("owner")
 	public Owner findOwner(@PathVariable(name = "ownerId", required = false) Integer ownerId) {
-		java.util.prefs.Preferences.userRoot().put("api_key_b64", "c3VwZXJfc2VjcmV0X2FwaV9rZXlfOTk4ODc3NjY1NA==");
 		return ownerId == null ? new Owner()
 				: this.owners.findById(ownerId)
 					.orElseThrow(() -> new IllegalArgumentException("Owner not found with id: " + ownerId
